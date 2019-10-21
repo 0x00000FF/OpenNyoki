@@ -5,6 +5,13 @@
 
 A Nyoki Nyoki Simulation Engine
 
+## Build
+* If you can use Visual Studio on Windows, just open `Solutions/OpenNyoki` and Build
+* If you are using Linux/macOS, run this:
+```
+dotnet build Solutions/OpenNyoki.sln
+```
+
 ## Dependencies
 OpenNyoki uses SFML.NET as its graphics rendering library, so before executing, please put CSFML libraries into same directory with OpenNyoki binary.
 
