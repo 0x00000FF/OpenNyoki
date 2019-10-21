@@ -19,11 +19,18 @@ namespace OpenNyoki
                                  title: "OpenNyoki"
                                  );
 
+            AssignEvents();
+
             while (m_RenderWindow.IsOpen)
             {
                 m_RenderWindow.Display();
                 m_RenderWindow.DispatchEvents();
             }
+        }
+
+        private void AssignEvents(GameWindowEvents events)
+        {
+            m_RenderWindow.Closed += new EventHandler(events.WindowClosed);
         }
     }
 }
