@@ -7,6 +7,9 @@ using SFML.Window;
 
 namespace OpenNyoki
 {
+    /// <summary>
+    /// Describes Game Window.
+    /// </summary>
     class GameWindow
     {
         private RenderWindow m_RenderWindow = null;
@@ -14,6 +17,12 @@ namespace OpenNyoki
 
         private Game m_Game = null;
 
+        /// <summary>
+        /// Constructor
+        /// </summary>
+        /// <param name="_window">SFML Render Window</param>
+        /// <param name="_events">Event Object for Window Event Handling</param>
+        /// <param name="_game">Main Game Object</param>
         public GameWindow(RenderWindow _window = null, 
                           GameWindowEvents _events = null, 
                           Game _game = null)
@@ -35,6 +44,10 @@ namespace OpenNyoki
             }
         }
 
+        /// <summary>
+        /// Assigns Event Handlers for Game Window
+        /// </summary>
+        /// <param name="events">Event Handler Implementation Object</param>
         private void AssignEvents(GameWindowEvents events)
         {
             m_RenderWindow.Closed += new EventHandler(events.WindowClosed);
